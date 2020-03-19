@@ -144,3 +144,5 @@ include/
 
 bin/
 lib64/
+
+share/
