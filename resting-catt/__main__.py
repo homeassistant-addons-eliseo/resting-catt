@@ -1,8 +1,10 @@
 """Start Resting Catt."""
-import sys
 
 def main():
+    import app
     print("Starting Resting Catt")
-    
+
+    return app.run()
+
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
