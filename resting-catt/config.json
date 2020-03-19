@@ -1,0 +1,16 @@
+{
+    "name": "Resting Catt",
+    "version": "0.0.1a0",
+    "slug": "resting_catt",
+    "description": "REST API for CATT",
+    "arch": ["amd64", "armv7", "aarch64"],
+    "startup": "before",
+    "url": "https://github.com/eliseomartelli/Resting-Catt",
+    "boot": "auto",
+    "options": {
+    },
+    "schema": {},
+    "ports": {
+      "9898/tcp": 9898
+    }
+}
