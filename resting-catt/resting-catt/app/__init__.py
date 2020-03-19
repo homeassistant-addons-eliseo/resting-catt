@@ -21,4 +21,4 @@ def cast_site():
         cst.load_url(data['url'])
 
 def run():
-    app.run(port=9898)
+    app.run(port=9898, host= '0.0.0.0'))
