@@ -5,7 +5,7 @@
     "description": "REST API for CATT",
     "arch": ["amd64", "armv7", "aarch64"],
     "startup": "before",
-    "url": "https://github.com/eliseomartelli/Resting-Catt",
+    "url": "https://github.com/homeassistant-addons-eliseo/Resting-Catt",
     "boot": "auto",
     "options": {
     },
