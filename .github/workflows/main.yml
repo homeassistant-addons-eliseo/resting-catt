@@ -17,27 +17,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-      with:
-        path: main
-
-    - uses: actions/checkout@v2
-      with:
-        repository: homeassistant-addons-eliseo/repository
-        path: repository
-    - run: |
-        mv -f main/resting-catt repository
-        cd repository
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "✨ Release"  -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        repository: homeassistant-addons-eliseo/repository
-
-
-
-
-    
+      - name: Copy to repository
+        uses: andstor/copycat-action@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          src_path: /resting-catt
+          dst_path: /resting-catt
+          dst_repo_name: homeassistant-addons-eliseo/repository
