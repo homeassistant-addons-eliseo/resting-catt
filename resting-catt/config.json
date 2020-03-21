@@ -1,6 +1,6 @@
 {
     "name": "Resting Catt",
-    "version": "0.0.1a5",
+    "version": "0.0.1a6",
     "slug": "resting_catt",
     "description": "REST API for CATT",
     "arch": ["amd64", "armv7", "aarch64"],
