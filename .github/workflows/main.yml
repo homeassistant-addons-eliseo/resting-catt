@@ -22,6 +22,6 @@ jobs:
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           src_path: /resting-catt
-          dst_path: /resting-catt
+          dst_path: /.
           dst_owner: homeassistant-addons-eliseo
           dst_repo_name: repository
