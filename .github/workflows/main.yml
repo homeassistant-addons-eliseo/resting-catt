@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Copy
 
 # Controls when the action will run. Triggers the workflow on push or pull request 
 # events but only for the master branch
@@ -23,4 +23,5 @@ jobs:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           src_path: /resting-catt
           dst_path: /resting-catt
-          dst_repo_name: homeassistant-addons-eliseo/repository
+          dst_owner: homeassistant-addons-eliseo
+          dst_repo_name: repository
