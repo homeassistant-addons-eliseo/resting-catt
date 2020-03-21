@@ -27,11 +27,11 @@ jobs:
         repository: homeassistant-addons-eliseo/repository
         path: repository
     - run: |
-        mv main/resting-catt repository
+        mv -f main/resting-catt repository
         cd repository
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git commit -m "✨ Release" -a
+        git commit -m "✨ Release"  -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
