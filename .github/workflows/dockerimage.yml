@@ -1,0 +1,19 @@
+name: Docker Image CI
+
+on:
+  release:
+    types: [published]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get the version
+      id: get_version
+      run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file resting-catt/Dockerfile --tag eliseomartelli/resting-catt:${{ steps.get_version.outputs.VERSION }}
