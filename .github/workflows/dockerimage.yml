@@ -16,4 +16,6 @@ jobs:
       run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file resting-catt/Dockerfile --tag eliseomartelli/resting-catt:${{ steps.get_version.outputs.VERSION }}
+      run: |
+        cd resting-catt
+        docker build . --file Dockerfile --tag eliseomartelli/resting-catt:${{ steps.get_version.outputs.VERSION }}
