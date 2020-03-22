@@ -19,3 +19,5 @@ jobs:
       run: |
         cd resting-catt
         docker build . --file Dockerfile --tag eliseomartelli/resting-catt:${{ steps.get_version.outputs.VERSION }}
+        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        docker push eliseomartelli/resting-catt:${{ steps.get_version.outputs.VERSION }}
