@@ -12,5 +12,6 @@
     "schema": {},
     "ports": {
       "9898/tcp": 9898
-    }
+    },
+    "image": "eliseomartelli/resting-catt"
 }
